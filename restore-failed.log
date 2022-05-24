@@ -1957,23 +1957,3 @@ task_args->thread_args: 0x4b580
 (00.454038) Error (criu/mount.c:3604): mnt: Can't unmount /tmp/.criu.mntns.Dxd7XG: Invalid argument
 (00.454043) Error (criu/mount.c:3609): mnt: Can't remove the directory /tmp/.criu.mntns.Dxd7XG: Device or resource busy
 (00.454053) Error (criu/cr-restore.c:2536): Restoring FAILED.
-```
-
-</p>
-</details>
-
-<!--
-Briefly describe the problem you are having in a few paragraphs.
--->
-
-**Steps to reproduce the issue:**
-1. Dump the container's init process  on the host (outside the container)
-2. Restore the process in a container  which network mode is host
-
-**Describe the results you received:**
-(00.393971) Error (criu/mount.c:3609): mnt: Can't remove the directory /tmp/.criu.mntns.Dxd7XG: Device or resource busy
-(00.454009) mnt: Switching to new ns to clean ghosts
-(00.454031) Error (criu/mount.c:3594): mnt: Can't remount root with MS_PRIVATE: Invalid argument
-(00.454038) Error (criu/mount.c:3604): mnt: Can't unmount /tmp/.criu.mntns.Dxd7XG: Invalid argument
-(00.454043) Error (criu/mount.c:3609): mnt: Can't remove the directory /tmp/.criu.mntns.Dxd7XG: Device or resource busy
-(00.454053) Error (criu/cr-restore.c:2536): Restoring FAILED.
